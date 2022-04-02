@@ -6,6 +6,9 @@ const deploy_package = JSON.parse(readFileSync("package.json"));
 
 // overwrite a couple of things:
 deploy_package.dependencies = desktop_package.dependencies;
+deploy_package.name = desktop_package.name;
+deploy_package.author = deploy_package.author;
+deploy_package.contributors = deploy_package.contributors;
 deploy_package.devDependencies = {
   "electron": desktop_package.devDependencies.electron,
   "electron-builder": desktop_package.devDependencies['electron-builder']

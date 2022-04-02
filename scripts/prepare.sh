@@ -17,14 +17,26 @@ echo ""
 echo "After this script succeeds"
 printf "%s " "Any key to continue, Ctrl-C to abort..."
 read ans
+
+# Remove the old bundle
 rm -rf dist engine icon node_modules package-lock.json
+
+# build everything
 cd ../starling-desktop
 sh update_engine.sh
 npm run build:prod
+
+# copy over the files
 cp -r dist engine icon main.js electron-builder.json $dir
+
+# merge package.json's
 cd $dir
 node scripts/merge_packages.js
+
+# install what should be installed
 npm i
+
+#done
 echo ""
 echo ""
 echo ""
