@@ -1,0 +1,45 @@
+{
+  "name": "starling-desktop",
+  "version": "0.2.2",
+  "description": "",
+  "author": {
+    "name": "Willem-Victor van Gerven",
+    "email": "wgerven@starling.international"
+  },
+  "contributors": [
+    {
+      "name": "Ivka Veljkovic",
+      "email": "vkaivkaiv@gmail.com"
+    }
+  ],
+  "keywords": [],
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "prebundle:linux": "sh scripts/prepare.sh",
+    "prebundle:windows": "sh scripts/prepare.sh",
+    "prebundle:mac": "sh scripts/prepare.sh",
+    "predeploy:linux": "sh scripts/prepare.sh",
+    "predeploy:windows": "sh scripts/prepare.sh",
+    "predeploy:mac": "sh scripts/prepare.sh",
+    "bundle:linux": "electron-builder build --linux -p=never",
+    "bundle:windows": "electron-builder build --windows -p=never",
+    "bundle:mac": "electron-builder build --mac -p=never",
+    "deploy:linux": "electron-builder build --linux -p=always",
+    "deploy:windows": "electron-builder build --windows -p=always",
+    "deploy:mac": "electron-builder build --mac -p=always"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@parcel/watcher": "2.0.0-alpha.7",
+    "drivelist": "9.2.4",
+    "sqlite3": "4.1.1",
+    "textract": "2.5.0",
+    "typeorm": "0.2.24",
+    "zeromq": "5.2.8"
+  },
+  "devDependencies": {
+    "electron": "8.0.1",
+    "electron-builder": "23.0.2"
+  }
+}
