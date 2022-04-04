@@ -27,7 +27,7 @@ sh update_engine.sh
 npm run build:prod
 
 # copy over the files
-cp -r dist engine icon main.js electron-builder.json $dir
+cp -r dist engine icon main.js $dir
 
 # merge package.json's
 cd $dir

@@ -1,0 +1,65 @@
+{
+  "productName": "Starling Desktop",
+  "directories": {
+    "output": "release/"
+  },
+  "files": [
+    "**/*",
+    "!**/*.ts",
+    "!**/*.js.map",
+    "!*.code-workspace",
+    "!LICENSE.md",
+    "!package.json",
+    "!package-lock.json",
+    "!src/",
+    "!e2e/",
+    "!hooks/",
+    "!angular.json",
+    "!_config.yml",
+    "!karma.conf.js",
+    "!tsconfig.json",
+    "!tslint.json",
+    "!run",
+    "!documentation",
+    "!*.log",
+    "!angular.webpack.js",
+    "!eslintrc.json",
+    "!package.json",
+    "!tsconfig*",
+    "!webpack.prod.js",
+    "!.mock_data",
+    "!*.sh",
+    "!check,js",
+    "!.npmrc",
+    "!prep_graph.js",
+    "!README.md",
+    "!typeorm*",
+    "engine",
+    "flock",
+    "build",
+    "icon"
+  ],
+  "extraResources": {
+    "from": "./engine/workers",
+    "to": "workers",
+    "filter": "**/*"
+  },
+  "win": {
+    "icon": "dist",
+    "target": [
+      "portable"
+    ]
+  },
+  "mac": {
+    "icon": "dist",
+    "target": [
+      "dmg"
+    ]
+  },
+  "linux": {
+    "icon": "dist",
+    "target": [
+      "AppImage"
+    ]
+  }
+}

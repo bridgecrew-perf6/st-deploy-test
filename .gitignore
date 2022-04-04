@@ -5,5 +5,4 @@ release
 node_modules
 main.js
 package-lock.json
-electron-builder.json
 *~
