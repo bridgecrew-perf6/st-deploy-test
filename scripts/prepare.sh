@@ -37,6 +37,9 @@ node scripts/merge_packages.js
 npm i
 npm i -D dotenv electron-notarize@1.2.1
 
+# set GH_TOKEN as environment variable
+node scripts/export_gh_token.js
+
 #done
 echo ""
 echo ""
