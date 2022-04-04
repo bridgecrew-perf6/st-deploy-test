@@ -35,6 +35,7 @@ node scripts/merge_packages.js
 
 # install what should be installed
 npm i
+npm i dotenv electron-notarize
 
 #done
 echo ""
