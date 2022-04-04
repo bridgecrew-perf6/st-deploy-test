@@ -51,11 +51,21 @@
     ]
   },
   "mac": {
+    "hardenedRuntime" : true,
+    "gatekeeperAssess": false,
+    "entitlements": "scripts/entitlements.mac.plist",
+    "entitlementsInherit": "scripts/entitlements.mac.plist",
     "icon": "dist",
     "target": [
-      "dmg"
+      "dmg",
+      "zip"
     ]
   },
+  "dmg": {
+    "sign": false
+  },
+  "afterSign": "scripts/notarize.js",
+
   "linux": {
     "icon": "dist",
     "target": [

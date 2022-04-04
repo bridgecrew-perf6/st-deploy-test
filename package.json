@@ -32,7 +32,9 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@parcel/watcher": "2.0.0-alpha.7",
+    "dotenv": "^16.0.0",
     "drivelist": "9.2.4",
+    "electron-notarize": "^1.2.1",
     "sqlite3": "4.1.1",
     "textract": "2.5.0",
     "typeorm": "0.2.24",
