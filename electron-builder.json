@@ -53,8 +53,8 @@
   "mac": {
     "hardenedRuntime" : true,
     "gatekeeperAssess": false,
-    "entitlements": "scripts/entitlements.mac.plist",
-    "entitlementsInherit": "scripts/entitlements.mac.plist",
+    "entitlements": "assets/entitlements.mac.plist",
+    "entitlementsInherit": "assets/entitlements.mac.plist",
     "icon": "dist",
     "target": [
       "dmg",
