@@ -3,23 +3,23 @@ require('dotenv').config();
 const { notarize } = require('electron-notarize');
 
 exports.default = async function notarizing(context) {
-  const { electronPlatformName, appOutDir } = context;  
+  const { electronPlatformName, appOutDir } = context;
   if (electronPlatformName !== 'darwin') {
     return;
   }
 
   const appName = context.packager.appInfo.productFilename;
 
-    console.log("*** " + process.env.APPLEID)
-    console.log("*** " + process.env.APPLEIDPASS)
-    console.log("*** " + process.env.APPLE_TEAM_ID)
+  console.log("*** " + process.env.APPLEID)
+  console.log("*** " + process.env.APPLEIDPASS)
+  console.log("*** " + process.env.APPLE_TEAM_ID)
 
   return await notarize({
-    appBundleId: 'com.yourcompany.yourAppId',
+    appBundleId: 'Starling.Desktop.App',
     appPath: `${appOutDir}/${appName}.app`,
     appleId: process.env.APPLEID,
     appleIdPassword: process.env.APPLEIDPASS,
-    ascProvider:  process.env.APPLE_TEAM_ID
+    ascProvider: process.env.APPLE_TEAM_ID
   });
 };
 

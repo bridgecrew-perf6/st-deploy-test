@@ -1,4 +1,6 @@
 {
+  "appId": "Starling.Desktop.App",
+  "copyright": "Copyright © Starling International",
   "productName": "Starling Desktop",
   "directories": {
     "output": "release/"
@@ -44,14 +46,23 @@
     "to": "workers",
     "filter": "**/*"
   },
+  "publish": {
+    "provider": "github"
+  },
   "win": {
     "icon": "dist",
     "target": [
-      "portable"
+      "NSIS"
+    ]
+  },
+  "linux": {
+    "icon": "dist",
+    "target": [
+      "AppImage"
     ]
   },
   "mac": {
-    "hardenedRuntime" : true,
+    "hardenedRuntime": true,
     "gatekeeperAssess": false,
     "entitlements": "assets/entitlements.mac.plist",
     "entitlementsInherit": "assets/entitlements.mac.plist",
@@ -64,12 +75,5 @@
   "dmg": {
     "sign": false
   },
-  "afterSign": "scripts/notarize.js",
-
-  "linux": {
-    "icon": "dist",
-    "target": [
-      "AppImage"
-    ]
-  }
+  "afterSign": "scripts/notarize.js"
 }
