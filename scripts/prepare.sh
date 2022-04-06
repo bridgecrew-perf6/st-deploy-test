@@ -31,7 +31,7 @@ cp -r dist engine icon main.js $dir
 
 # merge package.json's
 cd $dir
-node scripts/merge_packages.js
+node scripts/prepare_package_file.js
 
 # install what should be installed
 npm i

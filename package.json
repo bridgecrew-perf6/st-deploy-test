@@ -1,20 +1,5 @@
 {
-  "name": "starling-desktop",
-  "version": "0.2.2",
-  "description": "",
-  "author": {
-    "name": "Willem-Victor van Gerven",
-    "email": "wgerven@starling.international"
-  },
-  "contributors": [
-    {
-      "name": "Ivka Veljkovic",
-      "email": "vkaivkaiv@gmail.com"
-    }
-  ],
-  "keywords": [],
-  "main": "main.js",
-  "private": true,
+  "private": false,
   "scripts": {
     "prebundle:linux": "sh scripts/prepare.sh",
     "prebundle:windows": "sh scripts/prepare.sh",
@@ -30,6 +15,25 @@
     "deploy:mac": "electron-builder build --mac -p=always"
   },
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wgerven/st-deploy-test.git"
+  },
+  "name": "starling-desktop",
+  "version": "0.2.2",
+  "description": "Starling Digital Collaboration Platform desktop software. \n\n[LINUX COMPILATION]: To compile the native dependencies on Linux, make sure you have installed 'make', 'build-essentials', and that 'python' exists in /usr/bin (otherwise symlink it to python3)",
+  "keywords": [],
+  "author": {
+    "name": "Willem-Victor van Gerven",
+    "email": "wgerven@starling.international"
+  },
+  "contributors": [
+    {
+      "name": "Ivka Veljkovic",
+      "email": "vkaivkaiv@gmail.com"
+    }
+  ],
+  "main": "main.js",
   "dependencies": {
     "@parcel/watcher": "2.0.0-alpha.7",
     "drivelist": "9.2.4",
@@ -39,13 +43,7 @@
     "zeromq": "5.2.8"
   },
   "devDependencies": {
-    "dotenv": "^16.0.0",
     "electron": "8.0.1",
-    "electron-builder": "23.0.2",
-    "electron-notarize": "^1.2.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wgerven/st-deploy-test"
+    "electron-builder": "23.0.2"
   }
 }
