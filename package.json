@@ -20,7 +20,7 @@
     "url": "https://github.com/wgerven/st-deploy-test.git"
   },
   "name": "starling-desktop",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Starling Digital Collaboration Platform desktop software. \n\n[LINUX COMPILATION]: To compile the native dependencies on Linux, make sure you have installed 'make', 'build-essentials', and that 'python' exists in /usr/bin (otherwise symlink it to python3)",
   "keywords": [],
   "author": {
