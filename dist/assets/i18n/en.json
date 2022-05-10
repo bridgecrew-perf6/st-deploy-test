@@ -1,0 +1,19 @@
+{
+  "MENU": {
+    "items": {
+      "browser": "Browse",
+      "search": "Search",
+      "views": "Custom views",
+      "activity": "Activity",
+      "collab": "Collaborations",
+      "apps": "Apps",
+      "services": "Services",
+      "communications": "Communications"
+    },
+    "tooltips": {
+      "settings": "Settings",
+      "profile": "Profile",
+      "more": "More"
+    }
+  }
+}

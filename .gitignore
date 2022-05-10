@@ -1,10 +1,7 @@
 .cache
-dist
 engine
-icon
 release
 node_modules
-main.js
 package-lock.json
 .env
 .DS_Store
