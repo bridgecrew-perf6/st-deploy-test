@@ -34,7 +34,7 @@ node scripts/prepare_package_file.js
 
 # install what should be installed
 npm i
-npm i -D dotenv electron-notarize@1.2.1
+npm i -D dotenv electron-notarize@1.2.1 @electron/get extract-zip
 
 # set GH_TOKEN as environment variable
 node scripts/export_gh_token.js

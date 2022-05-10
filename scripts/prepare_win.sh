@@ -18,7 +18,7 @@ read ans
 
 # install what should be installed
 npm i
-npm i -D dotenv 
+npm i -D dotenv @electron/get extract-zip
 
 # set GH_TOKEN as environment variable
 node scripts/export_gh_token.js

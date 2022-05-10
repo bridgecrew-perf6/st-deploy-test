@@ -53,7 +53,7 @@ exports.default = async function (context) {
   // now we need to compile the engine
   console.log("> compiling...")
   if (process.platform !== 'win32') {
-    execSync(`./.cache/node_modules/.bin/bytenode -c -e engine/main.js`);
+    execSync(`./.cache/node_modules/.bin/bytenode -c -e ../starling-desktop/engine/main.js`);
   } else {
     // if we're on windows just get the js from the engine repo
     execSync(`./.cache/node_modules/.bin/bytenode -c -e ../starling-engine/bundle/main.js`);
