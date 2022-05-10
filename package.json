@@ -2,10 +2,10 @@
   "private": false,
   "scripts": {
     "prebundle:linux": "sh scripts/prepare.sh",
-    "prebundle:windows": "sh scripts/prepare.sh",
+    "prebundle:windows": "sh scripts/prepare_win.sh",
     "prebundle:mac": "sh scripts/prepare.sh",
     "predeploy:linux": "sh scripts/prepare.sh",
-    "predeploy:windows": "sh scripts/prepare.sh",
+    "predeploy:windows": "sh scripts/prepare_win.sh",
     "predeploy:mac": "sh scripts/prepare.sh",
     "bundle:linux": "electron-builder build --linux -p=never",
     "bundle:windows": "electron-builder build --windows -p=never",
