@@ -75,7 +75,8 @@ function mergePackages(GIT_URL) {
     deploy_package.dependencies = desktop_package.dependencies;
     deploy_package.devDependencies = {
       "electron": desktop_package.devDependencies.electron,
-      "electron-builder": desktop_package.devDependencies['electron-builder']
+      "electron-builder": desktop_package.devDependencies['electron-builder'],
+      "bytenode": desktop_package.devDependencies.bytenode,
     }
 
     // write to file

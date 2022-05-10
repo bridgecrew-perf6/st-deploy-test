@@ -20,16 +20,21 @@
     "url": "https://github.com/wgerven/st-deploy-test.git"
   },
   "name": "starling-desktop",
-  "version": "0.2.4",
+  "version": "0.2.2",
   "description": "Starling Digital Collaboration Platform desktop software. \n\n[LINUX COMPILATION]: To compile the native dependencies on Linux, make sure you have installed 'make', 'build-essentials', and that 'python' exists in /usr/bin (otherwise symlink it to python3)",
   "keywords": [],
   "author": {
     "name": "Willem-Victor van Gerven",
-    "email": "wgerven@starling.international"
+    "email": "wgerven@starlingintelligence.com"
   },
+  "contributors": [
+    {
+      "name": "Ivka Veljkovic",
+      "email": "ivka.veljkovic@starlingintelligence.com"
+    }
+  ],
   "main": "main.js",
   "dependencies": {
-    "@ant-design/icons-angular": "13.1.0",
     "@parcel/watcher": "2.0.0-alpha.7",
     "drivelist": "9.2.4",
     "sqlite3": "4.1.1",
@@ -38,6 +43,7 @@
     "zeromq": "5.2.8"
   },
   "devDependencies": {
+    "bytenode": "1.3.6",
     "dotenv": "^16.0.0",
     "electron": "8.0.1",
     "electron-builder": "23.0.2",

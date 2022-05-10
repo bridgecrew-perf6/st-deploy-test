@@ -1,55 +1,31 @@
 {
   "appId": "Starling.Desktop.App",
-  "copyright": "Copyright © Starling International",
+  "copyright": "Copyright © Starling LLC",
   "productName": "Starling Desktop",
   "directories": {
     "output": "release/"
   },
   "files": [
-    "**/*",
-    "!**/*.ts",
-    "!**/*.js.map",
-    "!*.code-workspace",
-    "!LICENSE.md",
-    "!package.json",
-    "!package-lock.json",
-    "!src/",
-    "!e2e/",
-    "!hooks/",
-    "!angular.json",
-    "!_config.yml",
-    "!karma.conf.js",
-    "!tsconfig.json",
-    "!tslint.json",
-    "!run",
-    "!documentation",
-    "!*.log",
-    "!angular.webpack.js",
-    "!eslintrc.json",
-    "!package.json",
-    "!tsconfig*",
-    "!webpack.prod.js",
-    "!.mock_data",
-    "!*.sh",
-    "!check,js",
-    "!.npmrc",
-    "!prep_graph.js",
-    "!README.md",
-    "!typeorm*",
-    "!.env",
-    "!assets",
-    "!.nvmrc",
-    "!scripts",
+    "CHANGELOG.md",
     "engine",
-    "flock",
-    "build",
-    "icon"
+    "dist",
+    "icon",
+    "main.js",
+    "package.json",
+    "!engine/**/*.js"
   ],
-  "extraResources": {
-    "from": "./engine/workers",
-    "to": "workers",
-    "filter": "**/*"
-  },
+  "extraResources": [
+    {
+      "from": "./engine/workers",
+      "to": "workers",
+      "filter": "**/*"
+    },
+    {
+      "from": "node_modules/bytenode",
+      "to": "bytenode",
+      "filter": "**/*"
+    }
+  ],
   "publish": {
     "provider": "github"
   },
@@ -63,7 +39,8 @@
     "icon": "dist",
     "target": [
       "AppImage"
-    ]
+    ],
+    "category": "System"
   },
   "mac": {
     "hardenedRuntime": true,
@@ -79,5 +56,9 @@
   "dmg": {
     "sign": false
   },
+  "electronDownload": {
+    "cache": ".cache"
+  },
+  "beforePack": "../starling-desktop/scripts/compile_engine.js",
   "afterSign": "scripts/notarize.js"
 }
