@@ -23,7 +23,7 @@ rm -rf dist engine icon node_modules package-lock.json
 
 # build everything
 cd ../starling-desktop
-sh update_engine.sh
+sh scripts/update_engine.sh
 npm run build:prod
 
 # copy over the files
