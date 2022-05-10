@@ -14,7 +14,6 @@ echo "##      starling-desktop/package.json               ##"
 echo "##                                                  ##"
 echo "######################################################"
 echo ""
-echo "After this script succeeds"
 printf "%s " "Any key to continue, Ctrl-C to abort..."
 read ans
 

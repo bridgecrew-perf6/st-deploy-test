@@ -59,6 +59,6 @@
   "electronDownload": {
     "cache": ".cache"
   },
-  "beforePack": "../starling-desktop/scripts/compile_engine.js",
+  "beforePack": "scripts/compile_engine.js",
   "afterSign": "scripts/notarize.js"
 }
