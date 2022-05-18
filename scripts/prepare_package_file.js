@@ -34,11 +34,12 @@ function mergePackages(GIT_URL) {
   const deploy_package = {
     "private": false,
     "scripts": {
+      "prepare_win": "npm i && npm i -D dotenv @electron/get extract-zip && node scripts/export_gh_token.js",
       "prebundle:linux": "sh scripts/prepare.sh",
-      "prebundle:windows": "sh scripts/prepare_win.sh",
+      "prebundle:windows": "npm run prepare_win",
       "prebundle:mac": "sh scripts/prepare.sh",
       "predeploy:linux": "sh scripts/prepare.sh",
-      "predeploy:windows": "sh scripts/prepare_win.sh",
+      "predeploy:windows": "npm run prepare_win",
       "predeploy:mac": "sh scripts/prepare.sh",
       "bundle:linux": "electron-builder build --linux -p=never",
       "bundle:windows": "electron-builder build --windows -p=never",

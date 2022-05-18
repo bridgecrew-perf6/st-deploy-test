@@ -31,7 +31,7 @@ exports.default = async function (context) {
   if (process.platform !== 'win32') {
     execSync(`cp ${path} ${resolve(dirname(path), "..")}`);
   } else {
-    execSync(`Copy-Item '${path}' -Destination '${resolve(dirname(path), "..")}'`);
+    execSync(`copy ${path} ${resolve(dirname(path), "..")}`);
   }
 
   // next we install electron locally
@@ -43,7 +43,7 @@ exports.default = async function (context) {
   if (process.platform !== 'win32') {
     execSync(`rm -rf ${target}`);
   } else {
-    execSync(`Remove-Item '${target}' -Recurse`);
+    execSync(`del /s ${target}`);
   }
   console.log("> extracting distro");
   mkdirSync(target);
@@ -59,7 +59,7 @@ exports.default = async function (context) {
     execSync(`./.cache/node_modules/.bin/bytenode -c -e ../starling-engine/bundle/main.js`);
     source = resolve("../starling-engine/bundle");
     target = resolve("engine");
-    execSync(`Copy-Item '${path}' -Destination '${target}'`);
+    execSync(`copy ${path} ${target}`);
   }
   console.log("> done")
 }
